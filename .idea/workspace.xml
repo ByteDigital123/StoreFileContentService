@@ -73,8 +73,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/composer.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+            <state relative-caret-position="196">
+              <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -93,6 +93,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>laravel</find>
+      <find>ill</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -115,10 +116,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="723" />
-    <option name="y" value="74" />
-    <option name="width" value="1197" />
-    <option name="height" value="965" />
+    <option name="x" value="707" />
+    <option name="y" value="23" />
+    <option name="width" value="1200" />
+    <option name="height" value="658" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -132,6 +133,11 @@
             <path>
               <item name="StoreFileContentService" type="b2602c69:ProjectViewProjectNode" />
               <item name="StoreFileContentService" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="StoreFileContentService" type="b2602c69:ProjectViewProjectNode" />
+              <item name="StoreFileContentService" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -167,24 +173,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1578667183040</updated>
-      <workItem from="1578667184359" duration="4054000" />
+      <workItem from="1578667184359" duration="4943000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4054000" />
+    <option name="totallyTimeSpent" value="4943000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="723" y="74" width="1197" height="965" extended-state="0" />
+    <frame x="707" y="23" width="1200" height="658" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25627705" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25561312" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.3298969" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="Tinkerwell" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -236,8 +242,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+        <state relative-caret-position="196">
+          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
         </state>
       </provider>
     </entry>
