@@ -7,49 +7,46 @@ use Illuminate\Support\Facades\Storage;
 
 class StoreFileContentService
 {
-    protected $file;
     protected $sanitized_file_name;
-    private $fileSystem;
 
-    public function __construct($file, $fileSystem)
+    public function __construct()
     {
-        $this->file = $file;
-        $this->fileSystem = $fileSystem;
+        //
     }
 
-    public function handle()
+    public function handle($file, $fileSystem)
     {
-        $this->sanitized_file_name = (new SanitizeFileName())->handle($this->getFileName()) . '_' . time() . '.' . $this->getFileExtension();
-        $this->storeFile();
+        $this->sanitized_file_name = (new SanitizeFileName())->handle($this->getFileName($file)) . '_' . time() . '.' . $this->getFileExtension($file);
+        $this->storeFile($file, $fileSystem);
 
         return [
-            'bytes' => $this->file->getClientSize(),
-            'format' => $this->file->getMimeType(),
+            'bytes' => $file->getClientSize(),
+            'format' => $file->getMimeType(),
             'original_filename' => $this->sanitized_file_name,
-            'url' => Storage::disk($this->fileSystem)->url($this->sanitized_file_name),
-            'secure_url' => Storage::disk($this->fileSystem)->url($this->sanitized_file_name),
+            'url' => Storage::disk($fileSystem)->url($this->sanitized_file_name),
+            'secure_url' => Storage::disk($fileSystem)->url($this->sanitized_file_name),
             'created_at' => $this->getCurrentTimestamp(),
             'updated_at' => $this->getCurrentTimestamp()
         ];
     }
 
-    public function storeFile()
+    public function storeFile($file, $fileSystem)
     {
         try {
-            Storage::disk($this->fileSystem)->put($this->sanitized_file_name, file_get_contents($this->file));
+            Storage::disk($fileSystem)->put($this->sanitized_file_name, file_get_contents($file));
         } catch (\Exception $e) {
             abort(500, $e->getMessage());
         }
     }
 
-    public function getFileExtension()
+    public function getFileExtension($file)
     {
-        return pathinfo($this->file->getClientOriginalName(), PATHINFO_EXTENSION);
+        return pathinfo($file->getClientOriginalName(), PATHINFO_EXTENSION);
     }
 
-    public function getFileName()
+    public function getFileName($file)
     {
-        return pathinfo($this->file->getClientOriginalName(), PATHINFO_FILENAME);
+        return pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME);
     }
 
     public function getCurrentTimestamp()
